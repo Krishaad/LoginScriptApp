@@ -9,19 +9,19 @@ while (loggingIn)
     
     Console.WriteLine("Enter corect username\n");
     Console.WriteLine("Or press 'x' to exit\n");
-    string username = Console.ReadLine();
-    string lowerCaseUsername = username.ToLower();
+    string? username = Console.ReadLine();
+    string? lowerCaseUsername = username.ToLower();
     //converts username to lower case
     //to ensure consistency since usernames are usually not case sensitive while passwords are
 
 
     if (lowerCaseUsername == "admin")
-    {
+    { 
         Console.Clear();
         Console.WriteLine("\nHello Admin\n");
-        Console.WriteLine("\nPlease enter your password\n");
+        Console.WriteLine("Please enter your password\n");
         //in this part user gets the correct username so is prompted for password
-        string password = Console.ReadLine();
+        string? password = Console.ReadLine();
         if (password == "Admin123@")
         {
           
@@ -61,10 +61,19 @@ else
 {
     //if user gets login details right console is cleared and they "enter their account"
     Console.Clear();
-    Console.WriteLine("Welcome Admin!\n");
-    Console.WriteLine("\nProfile");
-    Console.WriteLine("\nDashboard");
-    Console.WriteLine("\nSign out");
+    Console.WriteLine("""
+        Welcome Admin
+
+        1. Profile
+
+        2. Dashboard
+
+        3. Logout
+        """);
+
+
+
+
 }
 
 
